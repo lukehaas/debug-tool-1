@@ -1,0 +1,9 @@
+builds
+dist
+docker
+scripts
+
+src/util/outputMode.js
+src/util/invisibles.js
+src/util/hoistVariables.js
+test/end-to-end/runjs.spec.js

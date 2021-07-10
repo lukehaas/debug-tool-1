@@ -1,0 +1,5 @@
+{
+  "autoimport.autoComplete": false,
+  "editor.formatOnSave": true,
+  "prettier.configPath": "./.prettierrc.json"
+}
