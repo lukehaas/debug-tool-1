@@ -11,7 +11,11 @@ const { setupMenu } = require('./menu');
 const { getOrCreateMainWindow, closeMainWindow } = require('./mainWindow');
 
 const appPath = app.getAppPath();
-const userDataPath = app.getPath('userData');
+const userDataPath = path.resolve(app.getPath('userData'), 'debug-tool');
+
+if (!fs.existsSync(userDataPath)) {
+  fs.mkdirSync(userDataPath);
+}
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -53,6 +57,7 @@ const initializeNpm = () => {
         userDataPath,
       });
     } catch (err) {
+      console.log(err);
       return err;
     }
   }

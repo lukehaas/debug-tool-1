@@ -32,7 +32,7 @@ function createMainWindow() {
     height,
     minWidth: 400,
     minHeight: 250,
-    backgroundColor: '#272822',
+    backgroundColor: '#282a36',
     darkTheme: true,
     textAreasAreResizable: false,
     webPreferences: {
